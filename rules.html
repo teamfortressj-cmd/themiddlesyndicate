@@ -10,26 +10,40 @@
             margin: 0;
             padding: 0;
             background-color: #1a0033;
-            background-image: url('https://i.ibb.co/LshHzFh/9175e452-6fe9-45ef-afe3-50b9376246ea-removalai-preview.png');
-            background-repeat: repeat;
             color: white;
             position: relative;
+            overflow-x: hidden;
         }
         
-        body::before {
-            content: "";
-            position: absolute;
+        /* Animated background chains */
+        .chain-background {
+            position: fixed;
             top: 0;
             left: 0;
-            right: 0;
-            height: 150px;
-            background-image: url('https://i.ibb.co/hFkQFmVs/b576074a-9043-44a1-9374-947348b7d6fe-removalai-preview.png');
-            background-repeat: no-repeat;
-            background-position: left top, right top;
-            background-size: 80px 150px;
-            opacity: 0.8;
-            z-index: 1;
+            width: 100%;
+            height: 100%;
             pointer-events: none;
+            z-index: 0;
+        }
+        
+        .chain {
+            position: absolute;
+            background-image: url('https://i.ibb.co/LshHzFh/9175e452-6fe9-45ef-afe3-50b9376246ea-removalai-preview.png');
+            background-repeat: repeat-x;
+            background-size: 1414px auto;
+            height: 20px;
+            opacity: 0.3;
+            transform: rotate(45deg);
+            animation: drift linear infinite;
+        }
+        
+        @keyframes drift {
+            from {
+                transform: translateX(-100vw) rotate(45deg);
+            }
+            to {
+                transform: translateX(100vw) rotate(45deg);
+            }
         }
         
         .container { 
@@ -42,6 +56,7 @@
             position: relative;
             z-index: 2;
             box-shadow: 0 0 20px rgba(128, 0, 128, 0.5);
+            margin: 20px;
         }
         
         header {
@@ -153,6 +168,9 @@
     </style>
 </head>
 <body>
+    <!-- Animated background chains -->
+    <div class="chain-background" id="chainContainer"></div>
+    
     <div class="container">
         <header>
             <img src="https://i.ibb.co/gZdBCFNK/The-Middle-Logo.png" alt="Middle Logo" class="logo">
@@ -235,5 +253,33 @@
             <p>The Book of Vengeance • Maintained by the Middle</p>
         </footer>
     </div>
+    
+    <script>
+        
+        function createChains() {
+            const container = document.getElementById('chainContainer');
+            const numberOfChains = 8;
+            
+            for (let i = 0; i < numberOfChains; i++) {
+                const chain = document.createElement('div');
+                chain.className = 'chain';
+                
+                
+                const duration = 15 + Math.random() * 20; 
+                const topPos = Math.random() * 100; 
+                const delay = Math.random() * 10; y
+                
+                chain.style.top = `${topPos}%`;
+                chain.style.animationDuration = `${duration}s`;
+                chain.style.animationDelay = `${delay}s`;
+                chain.style.opacity = 0.2 + (Math.random() * 0.3); 
+                
+                container.appendChild(chain);
+            }
+        }
+        
+        
+        window.addEventListener('load', createChains);
+    </script>
 </body>
 </html>
