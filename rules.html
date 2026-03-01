@@ -8,147 +8,166 @@
         body { 
             font-family: 'Times New Roman', serif; 
             margin: 0;
-            padding: 0;
+            padding: 20px;
             background-color: #1a0033;
             background-image: url('https://i.ibb.co/LshHzFh/9175e452-6fe9-45ef-afe3-50b9376246ea-removalai-preview.png');
-            background-repeat: repeat;
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+            background-position: center top;
             color: white;
-            position: relative;
+            min-height: 100vh;
         }
         
-        body::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 150px;
+        .top-chains-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 15px 0;
+            padding: 0 40px;
+        }
+        
+        .chain-decoration {
+            width: 40px;
+            height: 80px;
             background-image: url('https://i.ibb.co/hFkQFmVs/b576074a-9043-44a1-9374-947348b7d6fe-removalai-preview.png');
+            background-size: contain;
             background-repeat: no-repeat;
-            background-position: left top, right top;
-            background-size: 80px 150px;
-            opacity: 0.8;
-            z-index: 1;
-            pointer-events: none;
+            background-position: center;
         }
         
         .container { 
-            max-width: 800px; 
+            max-width: 700px; 
             margin: 0 auto; 
             background: rgba(25, 0, 51, 0.9);
-            padding: 20px; 
-            border: 3px solid #FFD700;
-            border-radius: 5px;
-            position: relative;
-            z-index: 2;
-            box-shadow: 0 0 20px rgba(128, 0, 128, 0.5);
+            padding: 15px; 
+            border: 2px solid #FFD700;
+            border-radius: 3px;
+            box-shadow: 0 0 15px rgba(128, 0, 128, 0.4);
         }
         
         header {
             text-align: center;
-            padding: 20px 0;
+            padding: 15px 0;
         }
         
         .logo {
-            width: 150px;
+            width: 120px;
             height: auto;
-            margin: 0 auto 20px;
-            filter: drop-shadow(0 0 5px gold);
+            margin: 0 auto 15px;
         }
         
         h1 { 
             color: #FFD700; 
-            font-size: 2.5em;
-            text-shadow: 2px 2px 4px #000;
-            margin-bottom: 30px;
-            letter-spacing: 2px;
+            font-size: 2em;
+            text-shadow: 1px 1px 2px #000;
+            margin: 10px 0;
+            letter-spacing: 1px;
         }
         
         h2 { 
             color: #FFD700; 
-            border-bottom: 2px solid #FFD700;
-            padding-bottom: 10px;
+            border-bottom: 1px solid #FFD700;
+            padding-bottom: 8px;
             text-align: center;
+            font-size: 1.5em;
         }
         
         h3 { 
             color: #e0b0ff; 
-            margin-top: 25px;
-            border-left: 3px solid #800080;
-            padding-left: 10px;
+            margin-top: 20px;
+            border-left: 2px solid #800080;
+            padding-left: 8px;
+            font-size: 1.1em;
         }
         
         nav { 
-            margin: 20px 0; 
+            margin: 15px 0; 
             text-align: center;
-            background: rgba(128, 0, 128, 0.3);
-            padding: 15px;
-            border-radius: 5px;
+            background: rgba(128, 0, 128, 0.2);
+            padding: 10px;
+            border-radius: 3px;
             border: 1px solid #800080;
         }
         
         nav a { 
-            margin: 0 15px; 
+            margin: 0 10px; 
             text-decoration: none; 
             color: #FFD700; 
             font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            padding: 8px 15px;
-            border-radius: 3px;
-            transition: all 0.3s ease;
+            font-size: 0.9em;
+            padding: 5px 10px;
+            border-radius: 2px;
+            transition: all 0.2s ease;
         }
         
         nav a:hover { 
-            background: rgba(255, 215, 0, 0.2);
+            background: rgba(255, 215, 0, 0.1);
             text-decoration: underline; 
         }
         
         .rule-entry { 
             border: 1px solid #800080; 
-            margin: 20px 0; 
-            padding: 20px; 
-            border-radius: 8px; 
-            background: rgba(51, 0, 102, 0.5);
-            box-shadow: 0 0 10px rgba(128, 0, 128, 0.3);
-            transition: transform 0.2s ease;
-        }
-        
-        .rule-entry:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(128, 0, 128, 0.5);
+            margin: 15px 0; 
+            padding: 15px; 
+            border-radius: 5px; 
+            background: rgba(51, 0, 102, 0.4);
         }
         
         .punishment { 
             font-weight: bold; 
             color: #ff6b6b; 
-            margin: 15px 0; 
-            padding: 15px; 
-            background: rgba(139, 0, 0, 0.2); 
-            border-left: 4px solid #cc0000;
-            border-radius: 0 5px 5px 0;
+            margin: 10px 0; 
+            padding: 10px; 
+            background: rgba(139, 0, 0, 0.15); 
+            border-left: 3px solid #cc0000;
+            border-radius: 0 3px 3px 0;
         }
         
         .search-box { 
-            margin: 20px 0; 
-            padding: 12px; 
+            margin: 15px 0; 
+            padding: 10px; 
             width: 100%; 
             background: rgba(255, 255, 255, 0.1);
             border: 1px solid #800080;
             color: white;
-            border-radius: 5px;
-            font-size: 16px;
+            border-radius: 3px;
+            font-size: 14px;
         }
         
         ::placeholder {
             color: #b19cd9;
         }
         
+        .pagination {
+            text-align: center;
+            margin: 25px 0;
+            padding: 15px;
+            background: rgba(128, 0, 128, 0.2);
+            border-radius: 3px;
+        }
+        
+        .pagination a {
+            color: #FFD700;
+            text-decoration: none;
+            margin: 0 8px;
+            padding: 5px 10px;
+            border: 1px solid #800080;
+            border-radius: 3px;
+        }
+        
+        .pagination a.active {
+            background: #800080;
+            color: white;
+        }
+        
+        .pagination a:hover:not(.active) {
+            background: rgba(128, 0, 128, 0.3);
+        }
+        
         footer {
             text-align: center;
-            margin-top: 30px;
+            margin-top: 20px;
             color: #b19cd9;
-            font-size: 0.9em;
+            font-size: 0.8em;
         }
     </style>
 </head>
@@ -156,19 +175,25 @@
     <div class="container">
         <header>
             <img src="https://i.ibb.co/gZdBCFNK/The-Middle-Logo.png" alt="Middle Logo" class="logo">
+            
+            <div class="top-chains-container">
+                <div class="chain-decoration"></div>
+                <div class="chain-decoration"></div>
+            </div>
+            
             <h1>📖 Book of Vengeance</h1>
             <nav>
                 <a href="index.html">Home</a>
-                <a href="rules.html">Rules & Punishments</a>
-                <a href="vengeance-list.html">Vengeance List</a>
-                <a href="submit.html">Submit Entry</a>
+                <a href="rules.html">Rules</a>
+                <a href="vengeance-list.html">Vengeance</a>
+                <a href="submit.html">Submit</a>
             </nav>
         </header>
         
         <main>
-            <h2>Rules & Punishments Directory</h2>
+            <h2>Rules & Punishments - Title 1</h2>
             
-            <input type="text" id="searchBox" class="search-box" placeholder="Search for rules, punishments, or keywords...">
+            <input type="text" id="searchBox" class="search-box" placeholder="Search within Title 1 rules...">
             
             <div class="rule-entry">
                 <h3>Title 1, Section 1, Row A, Line 1</h3>
@@ -206,28 +231,13 @@
                 <div class="punishment">Complete and total extermination. Banishment of the betrayer</div>
             </div>
             
-            <div class="rule-entry">
-                <h3>Title 2, Section 1, Row A, Line 1</h3>
-                <p><strong>Crime:</strong> Fleeing from the Middle's retribution</p>
-                <div class="punishment">Double all existing punishments, punishment should begin by tearing their legs from the groin</div>
-            </div>
-            
-            <div class="rule-entry">
-                <h3>Title 2, Section 1, Row B, Line 2</h3>
-                <p><strong>Crime:</strong> Attempting to talk out the punishment (Includes trying to defend yourself from the punishment)</p>
-                <div class="punishment">Punishment should begin by tearing out their tongue</div>
-            </div>
-            
-            <div class="rule-entry">
-                <h3>Title 2, Section 1, Row C, Line 3</h3>
-                <p><strong>Crime:</strong> Attempting to fight back against the executioner</p>
-                <div class="punishment">Punishment should begin by tearing limbs that attacked the executioner. Start with the limb that did the most strikes, and go down to the one that did the least</div>
-            </div>
-            
-            <div class="rule-entry">
-                <h3>Title 2, Section 1, Row D, Line 4</h3>
-                <p><strong>Crime:</strong> Attempting to stop the Middle's retribution in any possible way that is not specified in the Book of Vengeance</p>
-                <div class="punishment">Double all existing punishments</div>
+            <div class="pagination">
+                <a href="rules-title1.html" class="active">1</a>
+                <a href="rules-title2.html">2</a>
+                <a href="rules-title3.html">3</a>
+                <a href="rules-title4.html">4</a>
+                <span>...</span>
+                <a href="rules-all.html">All</a>
             </div>
         </main>
         
