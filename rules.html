@@ -11,6 +11,35 @@
             background-color: #1a0033;
             color: white;
             position: relative;
+            overflow-x: hidden;
+        }
+        
+        /* Simple background chains */
+        .chain-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .chain-line {
+            position: absolute;
+            width: 2000px;
+            height: 30px;
+            background-image: url('https://i.ibb.co/LshHzFh/9175e452-6fe9-45ef-afe3-50b9376246ea-removalai-preview.png');
+            background-size: auto 30px;
+            background-repeat: repeat-x;
+            opacity: 0.3;
+            transform: rotate(45deg);
+            animation: moveRight 25s linear infinite;
+        }
+        
+        @keyframes moveRight {
+            from { transform: translateX(-1000px) rotate(45deg); }
+            to { transform: translateX(1000px) rotate(45deg); }
         }
         
         .container { 
@@ -21,6 +50,8 @@
             border: 3px solid #FFD700;
             border-radius: 5px;
             box-shadow: 0 0 20px rgba(128, 0, 128, 0.5);
+            position: relative;
+            z-index: 1;
         }
         
         header {
@@ -126,6 +157,16 @@
     </style>
 </head>
 <body>
+    <!-- Background chains -->
+    <div class="chain-bg">
+        <div class="chain-line" style="top: 10%; animation-duration: 20s;"></div>
+        <div class="chain-line" style="top: 25%; animation-duration: 30s; animation-delay: -5s;"></div>
+        <div class="chain-line" style="top: 40%; animation-duration: 25s; opacity: 0.2;"></div>
+        <div class="chain-line" style="top: 55%; animation-duration: 35s; animation-delay: -10s;"></div>
+        <div class="chain-line" style="top: 70%; animation-duration: 22s;"></div>
+        <div class="chain-line" style="top: 85%; animation-duration: 28s; animation-delay: -3s;"></div>
+    </div>
+    
     <div class="container">
         <header>
             <img src="https://i.ibb.co/gZdBCFNK/The-Middle-Logo.png" alt="Middle Logo" class="logo">
@@ -134,7 +175,7 @@
                 <a href="index.html">Home</a>
                 <a href="rules.html">Rules & Punishments</a>
                 <a href="vengeance-list.html">Vengeance List</a>
-                <a href="submit.html">Submit Entry</a>
+                <a href="submit.html">Submit</a>
             </nav>
         </header>
         
