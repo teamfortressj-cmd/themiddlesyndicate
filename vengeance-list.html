@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vengeance List - Book of Vengeance</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f5f5f5; }
+        .container { max-width: 900px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; }
+        h1, h2 { color: #8B0000; }
+        nav { margin: 20px 0; }
+        nav a { margin-right: 15px; text-decoration: none; color: #8B0000; }
+        nav a:hover { text-decoration: underline; }
+        
+        .entry { 
+            border: 1px solid #ddd; 
+            margin: 15px 0; 
+            padding: 15px; 
+            border-radius: 5px; 
+            background: #fafafa;
+        }
+        
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .name { font-weight: bold; font-size: 1.2em; }
+        .crime { color: #666; margin: 5px 0; }
+        .submitted-by { font-size: 0.9em; color: #888; }
+        
+        .punishment-section {
+            background: #f0f8ff;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        
+        .punishment-status {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 0.8em;
+        }
+        
+        .status-pending {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .status-completed {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .executor { font-weight: bold; }
+        
+        .leaderboard {
+            background: #fff8dc;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        
+        .leaderboard h3 { margin-top: 0; }
+        
+        .search-box { margin: 20px 0; padding: 10px; width: 100%; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📖 Book of Vengeance</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="rules.html">Rules & Punishments</a>
+                <a href="vengeance-list.html">Vengeance List</a>
+                <a href="submit.html">Submit Entry</a>
+            </nav>
+        </header>
+        
+        <main>
+            <h2>Vengeance List</h2>
+            
+            <input type="text" id="searchBox" class="search-box" placeholder="Search names or crimes...">
+            
+            <div class="leaderboard">
+                <h3>🏆 Current Leaders</h3>
+                <p><strong>Most Crimes Against Middle:</strong> John_Middlebreaker (12 entries)</p>
+                <p><strong>Most Active Submitters:</strong> MiddleGuardian42 (8 submissions)</p>
+            </div>
+            
+            <!-- Sample entries (these would be dynamic later) -->
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="name">Ricardo_Sinclair</span>
+                    <span class="punishment-status status-completed">✓ COMPLETED</span>
+                </div>
+                <div class="crime">Crime: Removed cute kitty stickers from Middle property</div>
+                <div class="submitted-by">Submitted by: MiddleWatcher1</div>
+                <div class="punishment-section">
+                    <strong>Punishment Delivered:</strong> Complete extermination<br>
+                    <strong>Executed by:</strong> <span class="executor">Executioner_Alpha</span>
+                </div>
+            </div>
+            
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="name">Sarah_CouponThief</span>
+                    <span class="punishment-status status-completed">✓ COMPLETED</span>
+                </div>
+                <div class="crime">Crime: Hair Salon Coupon theft</div>
+                <div class="submitted-by">Submitted by: SalonOwner23</div>
+                <div class="punishment-section">
+                    <strong>Punishment Delivered:</strong> Extermination of thief and affiliates<br>
+                    <strong>Executed by:</strong> <span class="executor">JusticeBringer</span>
+                </div>
+            </div>
+            
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="name">Mike_RudeBrother</span>
+                    <span class="punishment-status status-pending">⏳ PENDING</span>
+                </div>
+                <div class="crime">Crime: Insulted Big Brother's appearance</div>
+                <div class="submitted-by">Submitted by: BrotherProtector</div>
+                <div class="punishment-section">
+                    <strong>Pending Punishment:</strong> Tearing of jaws apart<br>
+                    <strong>Awaiting Executioner...</strong>
+                </div>
+            </div>
+            
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="name">Alex_FleeingCoward</span>
+                    <span class="punishment-status status-pending">⏳ PENDING</span>
+                </div>
+                <div class="crime">Crime: Fled from Middle's retribution</div>
+                <div class="submitted-by">Submitted by: MiddleEnforcer</div>
+                <div class="punishment-section">
+                    <strong>Pending Punishment:</strong> Leg removal + doubled penalty<br>
+                    <strong>Awaiting Executioner...</strong>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
