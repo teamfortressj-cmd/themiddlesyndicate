@@ -4,38 +4,154 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book of Vengeance - Middle Registry</title>
+    <style>
+        body { 
+            font-family: 'Times New Roman', serif; 
+            margin: 20px;
+            background-color: #1a0033;
+            background-image: url('https://i.ibb.co/VYD3QHX3/7b529c81-ae88-4474-863b-db0dd32b0418-removalai-preview-1.png');
+            background-repeat: repeat;
+            background-size: 200px 200px;
+            color: white;
+            position: relative;
+        }
+        
+        .container { 
+            max-width: 800px; 
+            margin: 0 auto; 
+            background: rgba(25, 0, 51, 0.9);
+            padding: 20px; 
+            border: 3px solid #FFD700;
+            border-radius: 5px;
+            box-shadow: 0 0 20px rgba(128, 0, 128, 0.5);
+        }
+        
+        header {
+            text-align: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            width: 150px;
+            height: auto;
+            margin: 0 auto 20px;
+            filter: drop-shadow(0 0 5px gold);
+        }
+        
+        h1 { 
+            color: #FFD700; 
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px #000;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+        }
+        
+        h2 { 
+            color: #FFD700; 
+            border-bottom: 2px solid #FFD700;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+        
+        h3 { 
+            color: #e0b0ff; 
+            margin-top: 25px;
+            border-left: 3px solid #800080;
+            padding-left: 10px;
+        }
+        
+        nav { 
+            margin: 20px 0; 
+            text-align: center;
+            background: rgba(128, 0, 128, 0.3);
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #800080;
+        }
+        
+        nav a { 
+            margin: 0 15px; 
+            text-decoration: none; 
+            color: #FFD700; 
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 8px 15px;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+        
+        nav a:hover { 
+            background: rgba(255, 215, 0, 0.2);
+            text-decoration: underline; 
+        }
+        
+        .status-box {
+            background: rgba(128, 0, 128, 0.2);
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+            border: 1px solid #800080;
+        }
+        
+        .how-it-works {
+            background: rgba(51, 0, 102, 0.3);
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+            border: 1px solid #800080;
+        }
+        
+        ol li, ul li {
+            margin: 10px 0;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #b19cd9;
+            font-size: 0.9em;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>📖 Book of Vengeance</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="rules.html">Rules & Punishments</a>
-            <a href="vengeance-list.html">Vengeance List</a>
-            <a href="submit.html">Submit Entry</a>
-        </nav>
-    </header>
-    
-    <main>
-        <h2>Welcome to the Middle's Registry</h2>
-        <p>A community-driven record of those who have wronged the Middle.</p>
+    <div class="container">
+        <header>
+            <img src="https://i.ibb.co/gZdBCFNK/The-Middle-Logo.png" alt="Middle Logo" class="logo">
+            <h1>📖 Book of Vengeance</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="rules.html">Rules & Punishments</a>
+                <a href="vengeance-list.html">Vengeance List</a>
+                <a href="submit.html">Submit</a>
+            </nav>
+        </header>
         
-        <div>
-            <h3>Current Status:</h3>
-            <ul>
-                <li>Total Entries: 0</li>
-                <li>Most Recent Addition: None</li>
-            </ul>
-        </div>
+        <main>
+            <h2>Welcome to the Middle's Registry</h2>
+            <p>A community-driven record of those who have wronged the Middle.</p>
+            
+            <div class="status-box">
+                <h3>Current Status:</h3>
+                <ul>
+                    <li>Total Entries: 0</li>
+                    <li>Most Recent Addition: None</li>
+                </ul>
+            </div>
+            
+            <div class="how-it-works">
+                <h3>How It Works:</h3>
+                <ol>
+                    <li>Check the Rules & Punishments page</li>
+                    <li>If someone broke a rule, submit their name</li>
+                    <li>View the Vengeance List to see who's been added</li>
+                </ol>
+            </div>
+        </main>
         
-        <div>
-            <h3>How It Works:</h3>
-            <ol>
-                <li>Check the Rules & Punishments page</li>
-                <li>If someone broke a rule, submit their name</li>
-                <li>View the Vengeance List to see who's been added</li>
-            </ol>
-        </div>
-    </main>
+        <footer>
+            <p>The Book of Vengeance • Maintained by the Middle</p>
+        </footer>
+    </div>
 </body>
 </html>
