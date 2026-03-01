@@ -11,33 +11,25 @@
             padding: 0;
             background-color: #1a0033;
             background-image: url('https://i.ibb.co/LshHzFh/9175e452-6fe9-45ef-afe3-50b9376246ea-removalai-preview.png');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
+            background-repeat: repeat;
             color: white;
             position: relative;
-            min-height: 100vh;
         }
         
-        .top-chains {
-            display: flex;
-            justify-content: space-between;
-            margin: 20px 0;
-            padding: 0 20px;
-        }
-        
-        .chain-left, .chain-right {
-            width: 60px;
-            height: 120px;
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 150px;
             background-image: url('https://i.ibb.co/hFkQFmVs/b576074a-9043-44a1-9374-947348b7d6fe-removalai-preview.png');
-            background-size: contain;
             background-repeat: no-repeat;
-            animation: float 3s ease-in-out infinite;
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
+            background-position: left top, right top;
+            background-size: 80px 150px;
+            opacity: 0.8;
+            z-index: 1;
+            pointer-events: none;
         }
         
         .container { 
@@ -50,7 +42,6 @@
             position: relative;
             z-index: 2;
             box-shadow: 0 0 20px rgba(128, 0, 128, 0.5);
-            margin: 20px;
         }
         
         header {
@@ -69,7 +60,7 @@
             color: #FFD700; 
             font-size: 2.5em;
             text-shadow: 2px 2px 4px #000;
-            margin-bottom: 10px;
+            margin-bottom: 30px;
             letter-spacing: 2px;
         }
         
@@ -106,7 +97,6 @@
             padding: 8px 15px;
             border-radius: 3px;
             transition: all 0.3s ease;
-            display: inline-block;
         }
         
         nav a:hover { 
@@ -166,18 +156,12 @@
     <div class="container">
         <header>
             <img src="https://i.ibb.co/gZdBCFNK/The-Middle-Logo.png" alt="Middle Logo" class="logo">
-            
-            <div class="top-chains">
-                <div class="chain-left"></div>
-                <div class="chain-right"></div>
-            </div>
-            
             <h1>📖 Book of Vengeance</h1>
             <nav>
                 <a href="index.html">Home</a>
                 <a href="rules.html">Rules & Punishments</a>
                 <a href="vengeance-list.html">Vengeance List</a>
-                <a href="submit.html">Submit</a>
+                <a href="submit.html">Submit Entry</a>
             </nav>
         </header>
         
