@@ -12,7 +12,7 @@
             background-color: #1a0033;
             background-image: url('https://i.ibb.co/LshHzFh/9175e452-6fe9-45ef-afe3-50b9376246ea-removalai-preview.png');
             background-repeat: no-repeat;
-            background-size: 50% auto;
+            background-size: auto 200px; /* Much smaller background chains */
             background-position: center top;
             color: white;
             min-height: 100vh;
@@ -153,6 +153,11 @@
             color: #b19cd9;
             font-size: 0.8em;
         }
+        
+        /* Simple search functionality */
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -171,39 +176,39 @@
         <main>
             <h2>Rules & Punishments - Title 1</h2>
             
-            <input type="text" id="searchBox" class="search-box" placeholder="Search within Title 1 rules...">
+            <input type="text" id="searchBox" class="search-box" placeholder="Search within Title 1 rules..." onkeyup="filterRules()">
             
-            <div class="rule-entry">
+            <div class="rule-entry" data-search="deserting personal gain title 1 section 1 row a line 1">
                 <h3>Title 1, Section 1, Row A, Line 1</h3>
                 <p><strong>Crime:</strong> Deserting from the Middle due to reasons of personal gain</p>
                 <div class="punishment">Complete extermination of the deserted member</div>
             </div>
             
-            <div class="rule-entry">
+            <div class="rule-entry" data-search="deserting external reasons title 1 section 1 row b line 2">
                 <h3>Title 1, Section 1, Row B, Line 2</h3>
                 <p><strong>Crime:</strong> Deserting from the Middle due to external reasons</p>
                 <div class="punishment">Complete extermination of the deserted member and all involved parties</div>
             </div>
             
-            <div class="rule-entry">
+            <div class="rule-entry" data-search="deserting unspecified reason title 1 section 1 row c line 3">
                 <h3>Title 1, Section 1, Row C, Line 3</h3>
                 <p><strong>Crime:</strong> Deserting from the Middle due to any unspecified reason</p>
                 <div class="punishment">Complete extermination of the deserted member</div>
             </div>
             
-            <div class="rule-entry">
+            <div class="rule-entry" data-search="betraying personal gain title 1 section 2 row a line 1">
                 <h3>Title 1, Section 2, Row A, Line 1</h3>
                 <p><strong>Crime:</strong> Betraying the Middle for personal gain</p>
                 <div class="punishment">Complete and total extermination. Banishment of the betrayer</div>
             </div>
             
-            <div class="rule-entry">
+            <div class="rule-entry" data-search="betraying external reasons title 1 section 2 row b line 2">
                 <h3>Title 1, Section 2, Row B, Line 2</h3>
                 <p><strong>Crime:</strong> Betraying the Middle due to external reasons</p>
                 <div class="punishment">Complete and total extermination of all involved parties. Banishment of the betrayer</div>
             </div>
             
-            <div class="rule-entry">
+            <div class="rule-entry" data-search="betraying unspecified reason title 1 section 2 row c line 3">
                 <h3>Title 1, Section 2, Row C, Line 3</h3>
                 <p><strong>Crime:</strong> Betraying the Middle due to any reason not specified in the Book of Vengeance</p>
                 <div class="punishment">Complete and total extermination. Banishment of the betrayer</div>
@@ -223,5 +228,22 @@
             <p>The Book of Vengeance • Maintained by the Middle</p>
         </footer>
     </div>
+    
+    <script>
+        function filterRules() {
+            const searchInput = document.getElementById('searchBox');
+            const filter = searchInput.value.toLowerCase();
+            const ruleEntries = document.getElementsByClassName('rule-entry');
+            
+            for (let i = 0; i < ruleEntries.length; i++) {
+                const searchData = ruleEntries[i].getAttribute('data-search');
+                if (searchData.includes(filter)) {
+                    ruleEntries[i].style.display = '';
+                } else {
+                    ruleEntries[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
 </body>
 </html>
