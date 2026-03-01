@@ -8,154 +8,147 @@
         body { 
             font-family: 'Times New Roman', serif; 
             margin: 0;
-            padding: 20px;
+            padding: 0;
             background-color: #1a0033;
             background-image: url('https://i.ibb.co/LshHzFh/9175e452-6fe9-45ef-afe3-50b9376246ea-removalai-preview.png');
-            background-repeat: no-repeat;
-            background-size: auto 200px;
-            background-position: center top;
+            background-repeat: repeat;
             color: white;
-            min-height: 100vh;
+            position: relative;
+        }
+        
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 150px;
+            background-image: url('https://i.ibb.co/hFkQFmVs/b576074a-9043-44a1-9374-947348b7d6fe-removalai-preview.png');
+            background-repeat: no-repeat;
+            background-position: left top, right top;
+            background-size: 80px 150px;
+            opacity: 0.8;
+            z-index: 1;
+            pointer-events: none;
         }
         
         .container { 
-            max-width: 700px; 
+            max-width: 800px; 
             margin: 0 auto; 
             background: rgba(25, 0, 51, 0.9);
-            padding: 15px; 
-            border: 2px solid #FFD700;
-            border-radius: 3px;
-            box-shadow: 0 0 15px rgba(128, 0, 128, 0.4);
+            padding: 20px; 
+            border: 3px solid #FFD700;
+            border-radius: 5px;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 0 20px rgba(128, 0, 128, 0.5);
         }
         
         header {
             text-align: center;
-            padding: 15px 0;
+            padding: 20px 0;
         }
         
         .logo {
-            width: 120px;
+            width: 150px;
             height: auto;
-            margin: 0 auto 15px;
+            margin: 0 auto 20px;
+            filter: drop-shadow(0 0 5px gold);
         }
         
         h1 { 
             color: #FFD700; 
-            font-size: 2em;
-            text-shadow: 1px 1px 2px #000;
-            margin: 10px 0;
-            letter-spacing: 1px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px #000;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
         }
         
         h2 { 
             color: #FFD700; 
-            border-bottom: 1px solid #FFD700;
-            padding-bottom: 8px;
+            border-bottom: 2px solid #FFD700;
+            padding-bottom: 10px;
             text-align: center;
-            font-size: 1.5em;
         }
         
         h3 { 
             color: #e0b0ff; 
-            margin-top: 20px;
-            border-left: 2px solid #800080;
-            padding-left: 8px;
-            font-size: 1.1em;
+            margin-top: 25px;
+            border-left: 3px solid #800080;
+            padding-left: 10px;
         }
         
         nav { 
-            margin: 15px 0; 
+            margin: 20px 0; 
             text-align: center;
-            background: rgba(128, 0, 128, 0.2);
-            padding: 10px;
-            border-radius: 3px;
+            background: rgba(128, 0, 128, 0.3);
+            padding: 15px;
+            border-radius: 5px;
             border: 1px solid #800080;
         }
         
         nav a { 
-            margin: 0 10px; 
+            margin: 0 15px; 
             text-decoration: none; 
             color: #FFD700; 
             font-weight: bold;
-            font-size: 0.9em;
-            padding: 5px 10px;
-            border-radius: 2px;
-            transition: all 0.2s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 8px 15px;
+            border-radius: 3px;
+            transition: all 0.3s ease;
         }
         
         nav a:hover { 
-            background: rgba(255, 215, 0, 0.1);
+            background: rgba(255, 215, 0, 0.2);
             text-decoration: underline; 
         }
         
         .rule-entry { 
             border: 1px solid #800080; 
-            margin: 15px 0; 
-            padding: 15px; 
-            border-radius: 5px; 
-            background: rgba(51, 0, 102, 0.4);
+            margin: 20px 0; 
+            padding: 20px; 
+            border-radius: 8px; 
+            background: rgba(51, 0, 102, 0.5);
+            box-shadow: 0 0 10px rgba(128, 0, 128, 0.3);
+            transition: transform 0.2s ease;
+        }
+        
+        .rule-entry:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(128, 0, 128, 0.5);
         }
         
         .punishment { 
             font-weight: bold; 
             color: #ff6b6b; 
-            margin: 10px 0; 
-            padding: 10px; 
-            background: rgba(139, 0, 0, 0.15); 
-            border-left: 3px solid #cc0000;
-            border-radius: 0 3px 3px 0;
+            margin: 15px 0; 
+            padding: 15px; 
+            background: rgba(139, 0, 0, 0.2); 
+            border-left: 4px solid #cc0000;
+            border-radius: 0 5px 5px 0;
         }
         
         .search-box { 
-            margin: 15px 0; 
-            padding: 10px; 
+            margin: 20px 0; 
+            padding: 12px; 
             width: 100%; 
             background: rgba(255, 255, 255, 0.1);
             border: 1px solid #800080;
             color: white;
-            border-radius: 3px;
-            font-size: 14px;
+            border-radius: 5px;
+            font-size: 16px;
         }
         
         ::placeholder {
             color: #b19cd9;
         }
         
-        .pagination {
-            text-align: center;
-            margin: 25px 0;
-            padding: 15px;
-            background: rgba(128, 0, 128, 0.2);
-            border-radius: 3px;
-        }
-        
-        .pagination a {
-            color: #FFD700;
-            text-decoration: none;
-            margin: 0 8px;
-            padding: 5px 10px;
-            border: 1px solid #800080;
-            border-radius: 3px;
-        }
-        
-        .pagination a.active {
-            background: #800080;
-            color: white;
-        }
-        
-        .pagination a:hover:not(.active) {
-            background: rgba(128, 0, 128, 0.3);
-        }
-        
         footer {
             text-align: center;
-            margin-top: 20px;
+            margin-top: 30px;
             color: #b19cd9;
-            font-size: 0.8em;
-        }
-        
-        .hidden {
-            display: none;
+            font-size: 0.9em;
         }
     </style>
 </head>
@@ -166,60 +159,75 @@
             <h1>📖 Book of Vengeance</h1>
             <nav>
                 <a href="index.html">Home</a>
-                <a href="rules.html">Rules</a>
-                <a href="vengeance-list.html">Vengeance</a>
-                <a href="submit.html">Submit</a>
+                <a href="rules.html">Rules & Punishments</a>
+                <a href="vengeance-list.html">Vengeance List</a>
+                <a href="submit.html">Submit Entry</a>
             </nav>
         </header>
         
         <main>
-            <h2>Rules & Punishments - Title 1</h2>
+            <h2>Rules & Punishments Directory</h2>
             
-            <input type="text" id="searchBox" class="search-box" placeholder="Search within Title 1 rules..." onkeyup="filterRules()">
+            <input type="text" id="searchBox" class="search-box" placeholder="Search for rules, punishments, or keywords...">
             
-            <div class="rule-entry" data-search="deserting personal gain title 1 section 1 row a line 1">
+            <div class="rule-entry">
                 <h3>Title 1, Section 1, Row A, Line 1</h3>
                 <p><strong>Crime:</strong> Deserting from the Middle due to reasons of personal gain</p>
                 <div class="punishment">Complete extermination of the deserted member</div>
             </div>
             
-            <div class="rule-entry" data-search="deserting external reasons title 1 section 1 row b line 2">
+            <div class="rule-entry">
                 <h3>Title 1, Section 1, Row B, Line 2</h3>
                 <p><strong>Crime:</strong> Deserting from the Middle due to external reasons</p>
                 <div class="punishment">Complete extermination of the deserted member and all involved parties</div>
             </div>
             
-            <div class="rule-entry" data-search="deserting unspecified reason title 1 section 1 row c line 3">
+            <div class="rule-entry">
                 <h3>Title 1, Section 1, Row C, Line 3</h3>
                 <p><strong>Crime:</strong> Deserting from the Middle due to any unspecified reason</p>
                 <div class="punishment">Complete extermination of the deserted member</div>
             </div>
             
-            <div class="rule-entry" data-search="betraying personal gain title 1 section 2 row a line 1">
+            <div class="rule-entry">
                 <h3>Title 1, Section 2, Row A, Line 1</h3>
                 <p><strong>Crime:</strong> Betraying the Middle for personal gain</p>
                 <div class="punishment">Complete and total extermination. Banishment of the betrayer</div>
             </div>
             
-            <div class="rule-entry" data-search="betraying external reasons title 1 section 2 row b line 2">
+            <div class="rule-entry">
                 <h3>Title 1, Section 2, Row B, Line 2</h3>
                 <p><strong>Crime:</strong> Betraying the Middle due to external reasons</p>
                 <div class="punishment">Complete and total extermination of all involved parties. Banishment of the betrayer</div>
             </div>
             
-            <div class="rule-entry" data-search="betraying unspecified reason title 1 section 2 row c line 3">
+            <div class="rule-entry">
                 <h3>Title 1, Section 2, Row C, Line 3</h3>
                 <p><strong>Crime:</strong> Betraying the Middle due to any reason not specified in the Book of Vengeance</p>
                 <div class="punishment">Complete and total extermination. Banishment of the betrayer</div>
             </div>
             
-            <div class="pagination">
-                <a href="rules-title1.html" class="active">1</a>
-                <a href="rules-title2.html">2</a>
-                <a href="rules-title3.html">3</a>
-                <a href="rules-title4.html">4</a>
-                <span>...</span>
-                <a href="rules-all.html">All</a>
+            <div class="rule-entry">
+                <h3>Title 2, Section 1, Row A, Line 1</h3>
+                <p><strong>Crime:</strong> Fleeing from the Middle's retribution</p>
+                <div class="punishment">Double all existing punishments, punishment should begin by tearing their legs from the groin</div>
+            </div>
+            
+            <div class="rule-entry">
+                <h3>Title 2, Section 1, Row B, Line 2</h3>
+                <p><strong>Crime:</strong> Attempting to talk out the punishment (Includes trying to defend yourself from the punishment)</p>
+                <div class="punishment">Punishment should begin by tearing out their tongue</div>
+            </div>
+            
+            <div class="rule-entry">
+                <h3>Title 2, Section 1, Row C, Line 3</h3>
+                <p><strong>Crime:</strong> Attempting to fight back against the executioner</p>
+                <div class="punishment">Punishment should begin by tearing limbs that attacked the executioner. Start with the limb that did the most strikes, and go down to the one that did the least</div>
+            </div>
+            
+            <div class="rule-entry">
+                <h3>Title 2, Section 1, Row D, Line 4</h3>
+                <p><strong>Crime:</strong> Attempting to stop the Middle's retribution in any possible way that is not specified in the Book of Vengeance</p>
+                <div class="punishment">Double all existing punishments</div>
             </div>
         </main>
         
@@ -227,22 +235,5 @@
             <p>The Book of Vengeance • Maintained by the Middle</p>
         </footer>
     </div>
-    
-    <script>
-        function filterRules() {
-            const searchInput = document.getElementById('searchBox');
-            const filter = searchInput.value.toLowerCase();
-            const ruleEntries = document.getElementsByClassName('rule-entry');
-            
-            for (let i = 0; i < ruleEntries.length; i++) {
-                const searchData = ruleEntries[i].getAttribute('data-search');
-                if (searchData.includes(filter)) {
-                    ruleEntries[i].style.display = '';
-                } else {
-                    ruleEntries[i].style.display = 'none';
-                }
-            }
-        }
-    </script>
 </body>
 </html>
