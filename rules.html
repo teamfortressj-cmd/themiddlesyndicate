@@ -14,7 +14,7 @@
             overflow-x: hidden;
         }
         
-        /* Simple background chains */
+        /* Dynamic background chains */
         .chain-bg {
             position: fixed;
             top: 0;
@@ -25,21 +25,33 @@
             z-index: -1;
         }
         
-        .chain-line {
+        .chain-element {
             position: absolute;
-            width: 2000px;
-            height: 30px;
+            width: 800px;
+            height: 40px;
             background-image: url('https://i.ibb.co/LshHzFh/9175e452-6fe9-45ef-afe3-50b9376246ea-removalai-preview.png');
-            background-size: auto 30px;
+            background-size: auto 40px;
             background-repeat: repeat-x;
-            opacity: 0.3;
-            transform: rotate(45deg);
-            animation: moveRight 25s linear infinite;
+            opacity: 0.25;
+            animation: float 20s infinite ease-in-out;
         }
         
-        @keyframes moveRight {
-            from { transform: translateX(-1000px) rotate(45deg); }
-            to { transform: translateX(1000px) rotate(45deg); }
+        @keyframes float {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            25% {
+                transform: translate(100px, 50px) rotate(10deg);
+            }
+            50% {
+                transform: translate(0, 100px) rotate(-10deg);
+            }
+            75% {
+                transform: translate(-100px, 50px) rotate(5deg);
+            }
+            100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
         }
         
         .container { 
@@ -157,15 +169,8 @@
     </style>
 </head>
 <body>
-    <!-- Background chains -->
-    <div class="chain-bg">
-        <div class="chain-line" style="top: 10%; animation-duration: 20s;"></div>
-        <div class="chain-line" style="top: 25%; animation-duration: 30s; animation-delay: -5s;"></div>
-        <div class="chain-line" style="top: 40%; animation-duration: 25s; opacity: 0.2;"></div>
-        <div class="chain-line" style="top: 55%; animation-duration: 35s; animation-delay: -10s;"></div>
-        <div class="chain-line" style="top: 70%; animation-duration: 22s;"></div>
-        <div class="chain-line" style="top: 85%; animation-duration: 28s; animation-delay: -3s;"></div>
-    </div>
+    <!-- Dynamic background chains -->
+    <div class="chain-bg" id="chainContainer"></div>
     
     <div class="container">
         <header>
@@ -249,5 +254,47 @@
             <p>The Book of Vengeance • Maintained by the Middle</p>
         </footer>
     </div>
+    
+    <script>
+        function createChains() {
+            const container = document.getElementById('chainContainer');
+            const numberOfChains = 12;
+            
+            for (let i = 0; i < numberOfChains; i++) {
+                const chain = document.createElement('div');
+                chain.className = 'chain-element';
+                
+                // Random starting positions
+                const startX = Math.random() * 100;
+                const startY = Math.random() * 100;
+                chain.style.left = `${startX}%`;
+                chain.style.top = `${startY}%`;
+                
+                // Random rotation
+                const rotation = (Math.random() * 90) - 45; // -45 to 45 degrees
+                chain.style.transform = `rotate(${rotation}deg)`;
+                
+                // Random animation duration and delay
+                const duration = 15 + Math.random() * 20; // 15-35 seconds
+                const delay = Math.random() * 10; // 0-10 seconds delay
+                chain.style.animationDuration = `${duration}s`;
+                chain.style.animationDelay = `${delay}s`;
+                
+                // Random opacity
+                const opacity = 0.15 + (Math.random() * 0.2);
+                chain.style.opacity = opacity;
+                
+                // Random size
+                const size = 600 + (Math.random() * 600); // 600-1200px wide
+                chain.style.width = `${size}px`;
+                chain.style.height = `${20 + (Math.random() * 30)}px`; // 20-50px tall
+                
+                container.appendChild(chain);
+            }
+        }
+        
+        // Initialize when page loads
+        window.addEventListener('load', createChains);
+    </script>
 </body>
 </html>
