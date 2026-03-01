@@ -14,7 +14,7 @@
             overflow-x: hidden;
         }
         
-        /* Dynamic background chains */
+        /* Dynamic background chains - MUCH larger */
         .chain-bg {
             position: fixed;
             top: 0;
@@ -27,13 +27,13 @@
         
         .chain-element {
             position: absolute;
-            width: 800px;
-            height: 40px;
+            width: 2000px; /* Much wider */
+            height: 120px; /* Much taller */
             background-image: url('https://i.ibb.co/LshHzFh/9175e452-6fe9-45ef-afe3-50b9376246ea-removalai-preview.png');
-            background-size: auto 40px;
+            background-size: auto 120px; /* Match height */
             background-repeat: repeat-x;
-            opacity: 0.25;
-            animation: float 20s infinite ease-in-out;
+            opacity: 0.3;
+            animation: float 25s infinite ease-in-out;
         }
         
         @keyframes float {
@@ -41,13 +41,13 @@
                 transform: translate(0, 0) rotate(0deg);
             }
             25% {
-                transform: translate(100px, 50px) rotate(10deg);
+                transform: translate(150px, 100px) rotate(15deg);
             }
             50% {
-                transform: translate(0, 100px) rotate(-10deg);
+                transform: translate(0, 200px) rotate(-15deg);
             }
             75% {
-                transform: translate(-100px, 50px) rotate(5deg);
+                transform: translate(-150px, 100px) rotate(10deg);
             }
             100% {
                 transform: translate(0, 0) rotate(0deg);
@@ -258,7 +258,7 @@
     <script>
         function createChains() {
             const container = document.getElementById('chainContainer');
-            const numberOfChains = 12;
+            const numberOfChains = 8; // Fewer but bigger chains
             
             for (let i = 0; i < numberOfChains; i++) {
                 const chain = document.createElement('div');
@@ -271,23 +271,23 @@
                 chain.style.top = `${startY}%`;
                 
                 // Random rotation
-                const rotation = (Math.random() * 90) - 45; // -45 to 45 degrees
+                const rotation = (Math.random() * 90) - 45;
                 chain.style.transform = `rotate(${rotation}deg)`;
                 
                 // Random animation duration and delay
-                const duration = 15 + Math.random() * 20; // 15-35 seconds
-                const delay = Math.random() * 10; // 0-10 seconds delay
+                const duration = 20 + Math.random() * 20; // 20-40 seconds
+                const delay = Math.random() * 10;
                 chain.style.animationDuration = `${duration}s`;
                 chain.style.animationDelay = `${delay}s`;
                 
-                // Random opacity
-                const opacity = 0.15 + (Math.random() * 0.2);
+                // Random opacity (slightly more visible)
+                const opacity = 0.25 + (Math.random() * 0.2);
                 chain.style.opacity = opacity;
                 
-                // Random size
-                const size = 600 + (Math.random() * 600); // 600-1200px wide
+                // Much larger sizes (3x bigger than before)
+                const size = 1500 + (Math.random() * 1000); // 1500-2500px wide
                 chain.style.width = `${size}px`;
-                chain.style.height = `${20 + (Math.random() * 30)}px`; // 20-50px tall
+                chain.style.height = `${80 + (Math.random() * 80)}px`; // 80-160px tall
                 
                 container.appendChild(chain);
             }
