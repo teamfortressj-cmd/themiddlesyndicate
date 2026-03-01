@@ -7,43 +7,10 @@
     <style>
         body { 
             font-family: 'Times New Roman', serif; 
-            margin: 0;
-            padding: 0;
+            margin: 20px;
             background-color: #1a0033;
             color: white;
             position: relative;
-            overflow-x: hidden;
-        }
-        
-        /* Animated background chains */
-        .chain-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 0;
-        }
-        
-        .chain {
-            position: absolute;
-            background-image: url('https://i.ibb.co/LshHzFh/9175e452-6fe9-45ef-afe3-50b9376246ea-removalai-preview.png');
-            background-repeat: repeat-x;
-            background-size: 1414px auto;
-            height: 20px;
-            opacity: 0.3;
-            transform: rotate(45deg);
-            animation: drift linear infinite;
-        }
-        
-        @keyframes drift {
-            from {
-                transform: translateX(-100vw) rotate(45deg);
-            }
-            to {
-                transform: translateX(100vw) rotate(45deg);
-            }
         }
         
         .container { 
@@ -53,10 +20,7 @@
             padding: 20px; 
             border: 3px solid #FFD700;
             border-radius: 5px;
-            position: relative;
-            z-index: 2;
             box-shadow: 0 0 20px rgba(128, 0, 128, 0.5);
-            margin: 20px;
         }
         
         header {
@@ -126,12 +90,6 @@
             border-radius: 8px; 
             background: rgba(51, 0, 102, 0.5);
             box-shadow: 0 0 10px rgba(128, 0, 128, 0.3);
-            transition: transform 0.2s ease;
-        }
-        
-        .rule-entry:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(128, 0, 128, 0.5);
         }
         
         .punishment { 
@@ -168,9 +126,6 @@
     </style>
 </head>
 <body>
-    <!-- Animated background chains -->
-    <div class="chain-background" id="chainContainer"></div>
-    
     <div class="container">
         <header>
             <img src="https://i.ibb.co/gZdBCFNK/The-Middle-Logo.png" alt="Middle Logo" class="logo">
@@ -179,7 +134,7 @@
                 <a href="index.html">Home</a>
                 <a href="rules.html">Rules & Punishments</a>
                 <a href="vengeance-list.html">Vengeance List</a>
-                <a href="submit.html">Submit Entry</a>
+                <a href="submit.html">Submit</a>
             </nav>
         </header>
         
@@ -253,33 +208,5 @@
             <p>The Book of Vengeance • Maintained by the Middle</p>
         </footer>
     </div>
-    
-    <script>
-        
-        function createChains() {
-            const container = document.getElementById('chainContainer');
-            const numberOfChains = 8;
-            
-            for (let i = 0; i < numberOfChains; i++) {
-                const chain = document.createElement('div');
-                chain.className = 'chain';
-                
-                
-                const duration = 15 + Math.random() * 20; 
-                const topPos = Math.random() * 100; 
-                const delay = Math.random() * 10; y
-                
-                chain.style.top = `${topPos}%`;
-                chain.style.animationDuration = `${duration}s`;
-                chain.style.animationDelay = `${delay}s`;
-                chain.style.opacity = 0.2 + (Math.random() * 0.3); 
-                
-                container.appendChild(chain);
-            }
-        }
-        
-        
-        window.addEventListener('load', createChains);
-    </script>
 </body>
 </html>
