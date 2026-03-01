@@ -14,7 +14,7 @@
             overflow-x: hidden;
         }
         
-        /* Dynamic background chains - MUCH larger */
+        /* Extremely long background chains */
         .chain-bg {
             position: fixed;
             top: 0;
@@ -27,13 +27,13 @@
         
         .chain-element {
             position: absolute;
-            width: 2000px; /* Much wider */
-            height: 120px; /* Much taller */
-            background-image: url('https://i.ibb.co/LshHzFh/9175e452-6fe9-45ef-afe3-50b9376246ea-removalai-preview.png');
-            background-size: auto 120px; /* Match height */
+            width: 10000px; /* EXTREMELY long - 10,000px wide */
+            height: 180px; /* Tall enough to be visible */
+            background-image: url('https://i.ibb.co/MD5fwk2d/AIEnhancer-history-output-1.png');
+            background-size: auto 180px;
             background-repeat: repeat-x;
-            opacity: 0.3;
-            animation: float 25s infinite ease-in-out;
+            opacity: 0.35;
+            animation: float 35s infinite ease-in-out;
         }
         
         @keyframes float {
@@ -41,13 +41,13 @@
                 transform: translate(0, 0) rotate(0deg);
             }
             25% {
-                transform: translate(150px, 100px) rotate(15deg);
+                transform: translate(400px, 250px) rotate(25deg);
             }
             50% {
-                transform: translate(0, 200px) rotate(-15deg);
+                transform: translate(0, 500px) rotate(-25deg);
             }
             75% {
-                transform: translate(-150px, 100px) rotate(10deg);
+                transform: translate(-400px, 250px) rotate(20deg);
             }
             100% {
                 transform: translate(0, 0) rotate(0deg);
@@ -169,7 +169,7 @@
     </style>
 </head>
 <body>
-    <!-- Dynamic background chains -->
+    <!-- Extremely long background chains -->
     <div class="chain-bg" id="chainContainer"></div>
     
     <div class="container">
@@ -258,7 +258,7 @@
     <script>
         function createChains() {
             const container = document.getElementById('chainContainer');
-            const numberOfChains = 8; // Fewer but bigger chains
+            const numberOfChains = 6; // Fewer but extremely long chains
             
             for (let i = 0; i < numberOfChains; i++) {
                 const chain = document.createElement('div');
@@ -275,19 +275,18 @@
                 chain.style.transform = `rotate(${rotation}deg)`;
                 
                 // Random animation duration and delay
-                const duration = 20 + Math.random() * 20; // 20-40 seconds
-                const delay = Math.random() * 10;
+                const duration = 25 + Math.random() * 25; // 25-50 seconds
+                const delay = Math.random() * 15;
                 chain.style.animationDuration = `${duration}s`;
                 chain.style.animationDelay = `${delay}s`;
                 
-                // Random opacity (slightly more visible)
-                const opacity = 0.25 + (Math.random() * 0.2);
+                // Random opacity
+                const opacity = 0.3 + (Math.random() * 0.25);
                 chain.style.opacity = opacity;
                 
-                // Much larger sizes (3x bigger than before)
-                const size = 1500 + (Math.random() * 1000); // 1500-2500px wide
-                chain.style.width = `${size}px`;
-                chain.style.height = `${80 + (Math.random() * 80)}px`; // 80-160px tall
+                // EXTREMELY long chains (10,000px wide)
+                chain.style.width = '1000px';
+                chain.style.height = `${120 + (Math.random() * 120)}px`; // 120-240px tall
                 
                 container.appendChild(chain);
             }
