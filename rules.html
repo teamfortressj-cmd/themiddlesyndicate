@@ -10,7 +10,7 @@
             margin: 0;
             padding: 0;
             background-color: #1a0033;
-            background-image: url('https://media.discordapp.net/attachments/983657618566443028/1477534175442636881/2FQtQPX.png');
+            background-image: url('https://i.ibb.co/LshHzFh/9175e452-6fe9-45ef-afe3-50b9376246ea-removalai-preview.png');
             background-repeat: repeat;
             color: white;
             position: relative;
@@ -22,12 +22,12 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 100px;
-            background-image: url('https://media.discordapp.net/attachments/983657618566443028/1477534175757336747/edI4vkf.png');
+            height: 150px;
+            background-image: url('https://i.ibb.co/hFkQFmVs/b576074a-9043-44a1-9374-947348b7d6fe-removalai-preview.png');
             background-repeat: no-repeat;
             background-position: left top, right top;
-            background-size: 50px 100px;
-            opacity: 0.7;
+            background-size: 80px 150px;
+            opacity: 0.8;
             z-index: 1;
             pointer-events: none;
         }
@@ -37,10 +37,11 @@
             margin: 0 auto; 
             background: rgba(25, 0, 51, 0.9);
             padding: 20px; 
-            border: 3px solid #gold;
+            border: 3px solid #FFD700;
             border-radius: 5px;
             position: relative;
             z-index: 2;
+            box-shadow: 0 0 20px rgba(128, 0, 128, 0.5);
         }
         
         header {
@@ -52,6 +53,7 @@
             width: 150px;
             height: auto;
             margin: 0 auto 20px;
+            filter: drop-shadow(0 0 5px gold);
         }
         
         h1 { 
@@ -59,22 +61,30 @@
             font-size: 2.5em;
             text-shadow: 2px 2px 4px #000;
             margin-bottom: 30px;
+            letter-spacing: 2px;
         }
         
         h2 { 
             color: #FFD700; 
             border-bottom: 2px solid #FFD700;
             padding-bottom: 10px;
+            text-align: center;
         }
         
         h3 { 
             color: #e0b0ff; 
             margin-top: 25px;
+            border-left: 3px solid #800080;
+            padding-left: 10px;
         }
         
         nav { 
             margin: 20px 0; 
             text-align: center;
+            background: rgba(128, 0, 128, 0.3);
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #800080;
         }
         
         nav a { 
@@ -84,11 +94,14 @@
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 1px;
+            padding: 8px 15px;
+            border-radius: 3px;
+            transition: all 0.3s ease;
         }
         
         nav a:hover { 
+            background: rgba(255, 215, 0, 0.2);
             text-decoration: underline; 
-            color: white;
         }
         
         .rule-entry { 
@@ -98,6 +111,12 @@
             border-radius: 8px; 
             background: rgba(51, 0, 102, 0.5);
             box-shadow: 0 0 10px rgba(128, 0, 128, 0.3);
+            transition: transform 0.2s ease;
+        }
+        
+        .rule-entry:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(128, 0, 128, 0.5);
         }
         
         .punishment { 
@@ -118,17 +137,25 @@
             border: 1px solid #800080;
             color: white;
             border-radius: 5px;
+            font-size: 16px;
         }
         
         ::placeholder {
             color: #b19cd9;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #b19cd9;
+            font-size: 0.9em;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <img src="https://limbuscompany.wiki.gg/images/thumb/9/93/Middle_E.png/250px-Middle_E.png" alt="Middle Logo" class="logo">
+            <img src="https://i.ibb.co/gZdBCFNK/The-Middle-Logo.png" alt="Middle Logo" class="logo">
             <h1>📖 Book of Vengeance</h1>
             <nav>
                 <a href="index.html">Home</a>
@@ -203,6 +230,10 @@
                 <div class="punishment">Double all existing punishments</div>
             </div>
         </main>
+        
+        <footer>
+            <p>The Book of Vengeance • Maintained by the Middle</p>
+        </footer>
     </div>
 </body>
 </html>
